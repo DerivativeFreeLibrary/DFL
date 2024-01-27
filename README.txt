@@ -2,15 +2,13 @@
  How to use the derivative-free optimizer DFL for MINLP
 -----------------------------------------------------------
 
-1- Gunzip and untar the archive in a folder on your computer.
-
 -----------------------------------------------------------
    FORTRAN SOURCE
 -----------------------------------------------------------
 
-2- Edit file parameter.f to set the number of variables.
+1- Edit file parameter.f to set the number of variables.
 
-3- Edit file wrap_mixed.f90 to define your own MINLP problem.
+2- Edit file wrap_mixed.f90 to define your own MINLP problem.
    In particular, subroutines:
    INIZPAR(n,x,lb,ub)  
 	sets initial point and lower and upper bounds
@@ -24,13 +22,13 @@
    funct(n,x,f)
 	defines the objective function
 
-4- At command prompt execute 
+3- At command prompt execute 
 
      $> make
  
    which will create the executable 'dfl'
 
-5- execute
+4- execute
 
      $> ./dfl
 
